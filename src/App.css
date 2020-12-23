@@ -1,38 +1,52 @@
-.App {
+body {
+  font-size: 20px;
+  font-family: Montserrat;
+}
+
+.clickableSpan {
+  color: #0000FF;
+  cursor: pointer;
+}
+
+.clickableSpan:active {
+  color: #000099;
+	position:relative;
+	top:1px;
+}
+
+.errorMsg {
+  color: rgb(204, 0, 0);
+  font-size: 15px;
+  margin: 0px;
+}
+
+.tictactoeCell {
+  border: 1px solid black;
   text-align: center;
+  width: 50px;
+  height: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#lobbyCodeInput {
+  font-family: Montserrat;
+  border: 0;
+  border-bottom: 1px #0000FF solid;
+  display:inline-block;
+  outline:0;
+  font-size:20px;
+  color: #888;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#loadingAnimation {
+  border: 4px solid #ebebeb;
+  border-top: 4px solid #5858ff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
