@@ -1,15 +1,39 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(./fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./fonts/Montserrat/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  src: url(./fonts/Roboto_Mono/RobotoMono-Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  src: url(./fonts/Roboto_Mono/RobotoMono-Light.ttf);
+  font-weight: 300;
+}
+
+
 body {
   font-size: 20px;
   font-family: Montserrat;
 }
 
 .clickableSpan {
-  color: #0000FF;
+  color: #0562b8;
   cursor: pointer;
+  user-select: none;
 }
 
 .clickableSpan:active {
-  color: #000099;
+  color: rgb(13, 82, 146);
 	position:relative;
 	top:1px;
 }
@@ -18,32 +42,78 @@ body {
   color: rgb(204, 0, 0);
   font-size: 15px;
   margin: 0px;
+  padding:0px;
+  animation: errorFlash 1.5s;
 }
 
 .tictactoeCell {
-  border: 1px solid black;
   text-align: center;
   width: 50px;
   height: 50px;
 }
 
-#lobbyCodeInput {
-  font-family: Montserrat;
-  border: 0;
-  border-bottom: 1px #0000FF solid;
-  display:inline-block;
-  outline:0;
-  font-size:20px;
-  color: #888;
-}
-
 #loadingAnimation {
   border: 4px solid #ebebeb;
-  border-top: 4px solid #5858ff;
+  border-top: 4px solid #1B78CF;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   animation: spin 2s linear infinite;
+}
+
+#lobbyURL {
+  font-size: 15px;
+  font-family: Roboto Mono;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(220,220,220);
+  border-radius: 2px;
+  font-weight: 300;
+  vertical-align: middle;
+}
+
+#lobbyURLButton {
+  vertical-align: middle;
+  text-align: center;
+  height: 25px;
+  background-color:#1B78CF;
+  border: 1px solid rgb(220,220,220);
+  border-radius: 2px;
+  color: #E8F2FA;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #bdbdbd;
+}
+
+#lobbyURLButton:hover {
+  box-shadow: 1px 1px 7px #bdbdbd;
+  background-color:#2b83d5;
+}
+
+
+@keyframes flash {
+  from {color: grey;}
+  to {color: black;}
+}
+
+@keyframes blackToGreen {
+  from {color: black;}
+  to {color: green;}
+}
+
+@keyframes errorFlash {
+  from {color: white;}
+  to {color: rgb(204, 0, 0);}
+}
+
+@keyframes blackToRed {
+  from {color: black;}
+  to {color: red;}
+}
+
+@keyframes fontBounce {
+  0%   {font-size: 40px;}
+  50%  {font-size: 35px;}
+  100% {font-size: 40px;}
 }
 
 @keyframes spin {

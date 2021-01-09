@@ -1,5 +1,5 @@
 {
-  "homepage": "http://hojmax.github.io/online-tictactoe",
+  "homepage": "http://hojmax.github.io/tic-tac-toe-online",
   "name": "tictactoe",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +12,7 @@
     "react-dom": "^17.0.1",
     "react-native-global-props": "^1.1.5",
     "react-scripts": "4.0.1",
+    "shortid": "^2.2.16",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
