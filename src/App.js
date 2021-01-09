@@ -6,6 +6,7 @@ import "./App.css"
 function App() {
   const [lobby, setLobby] = useState("")
   const [lobbyExists, setLobbyExists] = useState(false)
+  console.log(window.location)
   if (lobby) {
     return <Lobby lobbyExists={lobbyExists} lobby={lobby} />
   } else {

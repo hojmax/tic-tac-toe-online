@@ -99,7 +99,7 @@ function Lobby(props) {
   }, [hasCopiedURL])
   const BottomText = () => {
     if (props.lobby.server.players.length < 2) {
-      const lobbyURL = window.location.origin + "/?" + props.lobby.local.code
+      const lobbyURL = window.location.origin + window.location.pathname + "?" + props.lobby.local.code
       return <>
         <p>Waiting for opponent to join.</p>
         <div id="loadingAnimation"></div>
