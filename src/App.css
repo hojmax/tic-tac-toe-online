@@ -48,8 +48,9 @@ body {
 
 .tictactoeCell {
   text-align: center;
-  width: 50px;
-  height: 50px;
+  font-size: 6vw;
+  width: 10vw;
+  height: 10vw;
 }
 
 #loadingAnimation {
@@ -82,13 +83,16 @@ body {
   color: #E8F2FA;
   cursor: pointer;
   box-shadow: 1px 1px 5px #bdbdbd;
+  display: inline-block;
+  margin: 0px;
 }
 
 #lobbyURLButton:hover {
   box-shadow: 1px 1px 7px #bdbdbd;
-  background-color:#2b83d5;
+  background-color:#308ce1;
+  display: inline-block;
+  margin: 0px;
 }
-
 
 @keyframes flash {
   from {color: grey;}
@@ -111,9 +115,9 @@ body {
 }
 
 @keyframes fontBounce {
-  0%   {font-size: 40px;}
-  50%  {font-size: 35px;}
-  100% {font-size: 40px;}
+  0%   {font-size: 6vw;}
+  50%  {font-size: 5.5vw;}
+  100% {font-size: 6vw;}
 }
 
 @keyframes spin {

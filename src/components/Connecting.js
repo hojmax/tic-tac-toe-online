@@ -8,6 +8,7 @@ function Connecting(props) {
   const [waitingForServer, setWaitingForServer] = useState(false)
   const [showContent, setShowContent] = useState(false)
   const clientID = getRandomString(options.clientIDLength)
+
   const connect = (lobbyCode) => {
     let marking;
     Database.ref("tictactoeGames/_" + lobbyCode).once("value", (snapshot) => {
@@ -64,7 +65,7 @@ function Connecting(props) {
     }
   }
   useEffect(() => {
-    const linkCode = window.location.search.substring(1,options.lobbyCodeLength+1)
+    const linkCode = window.location.search.substring(1, options.lobbyCodeLength + 1)
     if (linkCode) {
       tryJoining(linkCode)
     } else {
@@ -75,11 +76,13 @@ function Connecting(props) {
     return <></>
   } else {
     return (
-      <center>
-        <h1>Tic-Tac-Toe Online</h1>
-        <p>Create a new lobby <span className="clickableSpan" onClick={createLobby}>here.</span></p>
-        {errorMsg && <p className="errorMsg">{errorMsg}</p>}
-      </center>
+      <>
+        <center>
+          <h1>Tic-Tac-Toe Online</h1>
+          <p>Create a new lobby <span className="clickableSpan" onClick={createLobby}>here.</span></p>
+          {errorMsg && <p className="errorMsg">{errorMsg}</p>}
+        </center>
+      </>
     )
   }
 }

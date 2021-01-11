@@ -101,12 +101,12 @@ function Lobby(props) {
     if (props.lobby.server.players.length < 2) {
       const lobbyURL = window.location.origin + window.location.pathname + "?" + props.lobby.local.code
       return <>
-        <p>Waiting for opponent to join.</p>
+        <p style={{fontSize: "2vw"}}>Waiting for opponent to join.</p>
         <div id="loadingAnimation"></div>
         <br />
         <br />
         <p style={{ margin: "0px 0px 10px 0px" }}>Invite a friend with an URL:</p>
-        <div>
+        <div style={{ fontSize: "0px" }}>
           <input
             id="lobbyURL"
             type="text"
@@ -115,7 +115,6 @@ function Lobby(props) {
             readOnly
             value={lobbyURL}
             size={lobbyURL.length + 1} />
-          {/*  */}
           <button
             onClick={(event) => { copyToClipboard(lobbyURL); setHasCopiedURL(true); document.getElementById("lobbyURL").select() }}
             id="lobbyURLButton">
@@ -124,12 +123,12 @@ function Lobby(props) {
         </div>
       </>
     } else {
-      const flashStyle = {
-        animation: "flash 1s"
-      }
       return <p
         id="bottomText"
-        style={flashStyle}>
+        style={{
+          animation: "flash 1s",
+          fontSize: "2vw",
+        }}>
         {gameState === undefined ?
           (clientsTurn() ? `Your turn to move (${props.lobby.local.marking === 1 ? "X" : "0"}).` : "Waiting for opponent to move.") :
           (gameState === 0 ? "The game has ended in a draw." :
@@ -162,13 +161,13 @@ function Lobby(props) {
     <div>
       <span onClick={() => window.location.search = ""} className="clickableSpan">Main Menu</span>
       <center>
-        <table cellSpacing="0" style={{ fontSize: "40px" }}>
+        <table cellSpacing="0">
           <tbody>
             {cells}
           </tbody>
         </table>
         <BottomText lobby={props} />
-        {!props.lobbyExists && <p className="errorMsg">Opponent disconnected.</p>}
+        {!props.lobbyExists && <p className="errorMsg">Opponent disconnect.</p>}
       </center>
     </div>
   )
