@@ -159,7 +159,7 @@ function Lobby(props) {
   )
   return (
     <div>
-      <span onClick={() => window.location.search = ""} className="clickableSpan">Main Menu</span>
+      <span onClick={() => window.location.search = ""} className="clickableSpan" style={{margin: "0px", padding: "0px", fontSize: "2vw"}}>Main Menu</span>
       <center>
         <table cellSpacing="0">
           <tbody>
