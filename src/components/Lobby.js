@@ -105,7 +105,7 @@ function Lobby(props) {
         <div id="loadingAnimation"></div>
         <br />
         <br />
-        <p style={{ margin: "0px 0px 10px 0px" }}>Invite a friend with an URL:</p>
+        <p style={{ margin: "0px 0px 10px 0px", fontSize: "1.5vw" }}>Invite a friend with an URL:</p>
         <div style={{ fontSize: "0px" }}>
           <input
             id="lobbyURL"
@@ -167,7 +167,7 @@ function Lobby(props) {
           </tbody>
         </table>
         <BottomText lobby={props} />
-        {!props.lobbyExists && <p className="errorMsg">Opponent disconnect.</p>}
+        {!props.lobbyExists && <p style={{fontSize:"1.5vw"}}className="errorMsg">Opponent disconnected.</p>}
       </center>
     </div>
   )
